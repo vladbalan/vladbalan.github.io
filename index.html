@@ -9,20 +9,18 @@ is_index: true
       {% include post.html %}
     {% endfor %}
 	
-	<div class="pagination" id="bottom_page">
-		<ul>
-			{% if paginator.previous_page %}
-				{% if paginator.previous_page == 1 %}
-				<li class="previous"><a href="{{ linkhome }}">&larr; Previous</a></li>
-				{% else %}
-				<li class="previous"><a href="{{ site.baseurl }}/page{{ paginator.previous_page }}">&larr; Previous</a></li>
-				{% endif %}
+	<ul class="pagination" id="bottom_page">
+		{% if paginator.previous_page %}
+			{% if paginator.previous_page == 1 %}
+			<li class="waves-effect previous"><a href="{{ linkhome }}"><i class="mdi-navigation-chevron-left"></i></a></li>
+			{% else %}
+			<li class="waves-effect previous"><a href="{{ site.baseurl }}/page{{ paginator.previous_page }}"><i class="mdi-navigation-chevron-left"></i></a></li>
 			{% endif %}
-				<li><p>Page {{ paginator.page }} of {{ paginator.total_pages }}</p></li>
-			{% if paginator.next_page %}
-				<li class="next"><a href="{{ site.baseurl }}/page{{ paginator.next_page }}">Next &rarr;</a></li>
-			{% endif %}
-		</ul>
-	</div>
+		{% endif %}
+			<li><p>Page {{ paginator.page }} of {{ paginator.total_pages }}</p></li>
+		{% if paginator.next_page %}
+			<li class="waves-effect next"><a href="{{ site.baseurl }}/page{{ paginator.next_page }}"><i class="mdi-navigation-chevron-right"></a></li>
+		{% endif %}
+	</ul>
 
 {% include footer.html %}
