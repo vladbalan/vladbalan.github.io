@@ -45,11 +45,16 @@ header h1, header h2, header h1 a, header h2 a{
 	border-right: 1px solid rgba(0, 0, 0, 0.15);
 }
 
-pre code {
+pre {
     background: #eee none repeat scroll 0 0;
     border: 1px solid #ddd;
-	color: #404040;
     padding: 3px;
+}
+
+pre code{
+	background-color: transparent;
+	color: #404040;
+	padding: 0;
 }
 
 em {
