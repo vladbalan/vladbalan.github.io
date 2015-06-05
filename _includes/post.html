@@ -16,7 +16,19 @@
     </div><!--content-->
 
 	<div class="span5 sidebar">
-		<em>Published on {{ post.date | date:'%d %B %Y' }} by {{ post.author }}</em>
+		<em>
+			Published on 
+			{% assign day = post.date | date: "%-d"  %}
+			{{ post.date | date: "%B" }} 
+			{% case day %}
+				{% when '1' or '21' or '31' %}{{ day }}st
+				{% when '2' or '22' %}{{ day }}nd
+				{% when '3' or '23' %}{{ day }}rd
+				{% else %}{{ day }}th
+			{% endcase %}, 
+			{{ post.date | date: "%Y" }} 
+			by {{ post.author }}
+		</em>
 		{% for category in post.categories %}
 		<h6>{{ category }}</h6>
 		{% endfor %}
