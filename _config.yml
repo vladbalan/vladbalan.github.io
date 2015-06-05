@@ -10,12 +10,12 @@ redcarpet:
 defaults:
     -
         scope:
-              type: "posts"
-        values:
-              author: "Anonymous"
-    -
-        scope:
               path: ""
         values:
               parent: "http://useful.io/"
+    -
+        scope:
+              type: "posts"
+        values:
+              author: "Anonymous"
               disqus: "disqus_VLf7F1EkG7"
