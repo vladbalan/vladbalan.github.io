@@ -7,15 +7,12 @@ baseurl:
 markdown: redcarpet
 redcarpet:
   extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "tables", "strikethrough", "superscript", "with_toc_data"]
+website_url: "http://useful.io/"
+blog_url: "http://vladbalan.github.io/"
+disqus: "usefulblog"
 defaults:
-    -
-        scope:
-              path: ""
-        values:
-              parent: "http://useful.io/"
     -
         scope:
               type: "posts"
         values:
               author: "Anonymous"
-              disqus: "usefulblog"
