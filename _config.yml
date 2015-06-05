@@ -13,3 +13,8 @@ defaults:
               type: "posts"
         values:
               author: "Anonymous"
+    -
+        scope:
+              path: ""
+        values:
+              parent: "http://useful.io/"
