@@ -45,18 +45,40 @@ header h1, header h2, header h1 a, header h2 a{
 	border-right: 1px solid rgba(0, 0, 0, 0.15);
 }
 
-pre, p code {
-    background: #eee none repeat scroll 0 0;
-    border: 1px solid #ddd;
-    padding: 3px;
-}
-
-pre code{
-	background-color: transparent;
-	color: #404040;
-	padding: 0;
-}
-
 em {
 	color: #777777;
+}
+
+.post-content pre {
+	border: 1px solid #ddd;
+	background-color: #eef;
+	padding: 0 .4em;
+}
+
+.post-content ul,
+.post-content ol {
+	margin-left: 1.35em;
+}
+
+.post-content code {
+	border: 1px solid #ddd;
+	background-color: #eef;
+	font-size: 85%;
+	padding: 0 .2em;
+}
+
+.post-content pre code {
+  border: none;
+}
+
+/* terminal */
+
+.post-content pre.terminal {
+border: 1px solid black;
+background-color: #333;
+color: white;
+}
+
+.post-content pre.terminal code {
+background-color: #333;
 }
