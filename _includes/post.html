@@ -1,9 +1,9 @@
   {% if page.is_index %}{% assign content = post.content %}{% endif %}
-    <div class="span11 content">
-		<div class="page-header">
+    <div class="post row">
+		<div class="header col s12">
 		 {% if post.title %}<h1 class="title">{% if page.is_index %}<a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>{% else %}{{ post.title}}{% endif %}</h1>{% endif %}
 		</div>
-		<div class="post_content flow-text">
+		<div class="content col s12 flow-text">
 			{% if page.is_index %}
 				{% if post.summary %}{{ post.summary }}
 				{% else %}
@@ -15,8 +15,8 @@
 		</div>
     </div><!--content-->
 
-	<div class="span5 sidebar">
-		<em>
+	<div class="details row">
+		<em class="right blue-grey-text">
 			Published on 
 			{% assign day = post.date | date: "%-d"  %}
 			{{ post.date | date: "%B" }} 
