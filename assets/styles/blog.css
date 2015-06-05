@@ -11,6 +11,30 @@ a.brand-logo {
     padding-bottom: 4em;
 }
 
+.content h1 {
+    font-size: 2rem;
+}
+
+.content h2 {
+    font-size: 1.8rem;
+}
+
+.content h3 {
+    font-size: 1.6rem;
+}
+
+.content h4 {
+    font-size: 1.4rem;
+}
+
+.content h5 {
+    font-size: 1.2rem;
+}
+
+.content h6 {
+    font-size: 1rem;
+}
+
 .tags {
 	line-height: 2.5em;
 }
