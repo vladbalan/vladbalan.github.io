@@ -28,12 +28,13 @@
 
 		<div class="content col s12 flow-text">
 			{% if page.is_index %}
-				{% if post.summary %}{{ post.summary }}
+				{% if post.summary %}
+					{{ post.summary }}
 				{% else %}
-				{{ content }}
+					{{ content }}
 				{% endif %}
 			{% else %}
-			{{ content }}
+				{{ content }}
 			{% endif %}
 		</div>
 
@@ -42,6 +43,10 @@
 				<span class="tag light-blue white-text">{{ tag }}</span>
 			{% endfor %}
 		</h6>
+
+		{% unless page.is_index %}
+			{% include disqus.html %}
+		{% endunless %}
     </div><!--content-->
 
 	

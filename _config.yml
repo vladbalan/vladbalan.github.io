@@ -18,3 +18,4 @@ defaults:
               path: ""
         values:
               parent: "http://useful.io/"
+              disqus: "disqus_VLf7F1EkG7"
