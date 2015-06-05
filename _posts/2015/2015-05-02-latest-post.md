@@ -2,6 +2,7 @@
 
 title: Introducing Jekyll Bootstrap
 layout: default
+author: Vlad Balan
 
 ---
 
