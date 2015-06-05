@@ -4,6 +4,7 @@ title: Markdown syntax test
 layout: default
 
 ---
+[TOC]
 
 # H1: The quick brown fox jumped over the lazy dog
 
