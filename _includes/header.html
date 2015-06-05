@@ -18,7 +18,18 @@
 	{% endif %}
 
 	<header>
-	<h1><a href="{{ linkhome }}">{{ site.name }}</a></h1>
+		<nav>
+			<div class="nav-wrapper light-blue white-text">
+				<a href="{{ linkhome }}" class="brand-logo left">{{ site.name }}</a>
+				<a href="#" data-activates="mobile-menu" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+				<ul class="right hide-on-med-and-down">
+					{% include menu.html %}
+				</ul>
+				<ul class="side-nav" id="mobile-menu">
+					{% include menu.html %}
+				</ul>
+			</div>
+		</nav>
 	</header>
 
 	<div class="container">
