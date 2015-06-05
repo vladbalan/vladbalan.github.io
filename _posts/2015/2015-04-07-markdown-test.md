@@ -6,10 +6,15 @@ layout: default
 ---
 
 # H1: The quick brown fox jumped over the lazy dog
+
 ## H2: The quick brown fox jumped over the lazy dog
+
 ### H3: The quick brown fox jumped over the lazy dog
+
 #### H4: The quick brown fox jumped over the lazy dog
+
 ##### H5: The quick brown fox jumped over the lazy dog
+
 ###### H6: The quick brown fox jumped over the lazy dog
 
 Alternatively, for H1 and H2, an underline-ish style:
