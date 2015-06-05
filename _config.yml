@@ -4,3 +4,9 @@ paginate: 10
 exclude: []
 name: Useful Blog
 baseurl: 
+defaults:
+    -
+        scope:
+              type: "posts"
+        values:
+              author: "Anonymous"
