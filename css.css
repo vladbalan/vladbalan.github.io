@@ -4,10 +4,10 @@
 	color: #ffffff ;
 	padding: 0.2em 0.9em;
 	margin-bottom: 1em;
-	font: normal normal normal 115%/normal 'Monaco', 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', monospace !important;
+	font: normal normal normal 0.7em/normal 'Monaco', 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', monospace !important;
 	line-height: 1.1em;
 	overflow: auto;
-	font-size: 1.0em;
+	font-size: 0.7em;
 	border: 1px solid #CCC;
 	-moz-border-radius:7px;
 	-webkit-border-radius:7px;
