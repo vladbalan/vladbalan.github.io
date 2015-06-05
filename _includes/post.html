@@ -11,7 +11,10 @@
 		{% endif %}
 
 		<div class="details col s12">
-			<span class="disqus-comment-count" data-disqus-identifier="{{ post.date | date: "%Y%m%d" }}-{{ post.url }}">Count</span>
+			<span class="comment-count blue-grey-text">
+				<i class="mdi-editor-mode-comment"></i>
+				<span class="disqus-comment-count" data-disqus-identifier="{{ post.date | date: "%Y%m%d" }}-{{ post.url }}">0 Comments</span>
+			</span>
 			<em class="right blue-grey-text">
 				Published on 
 				{% assign day = post.date | date: "%-d"  %}
