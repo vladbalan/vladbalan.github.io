@@ -1,21 +1,31 @@
   {% if page.is_index %}{% assign content = post.content %}{% endif %}
     <div class="post row">
-		<div class="header col s12">
-			{% if post.title %}
-				<h1 class="title light-blue-text">
-					{% if page.is_index %}
-						<a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
-					{% else %}
-						{{ post.title}}
-					{% endif %}
-				</h1>
-			{% endif %}
-			<h6>
-				{% for tag in post.tags %}
-					<span class="badge new light-blue">{{ tag }}</span>
-				{% endfor %}
-			</h6>
+		{% if post.title %}
+			<h1 class="title col s12 light-blue-text">
+				{% if page.is_index %}
+					<a href="{{ site.baseurl }}{{ post.url }}" class="light-blue-text">{{ post.title }}</a>
+				{% else %}
+					{{ post.title}}
+				{% endif %}
+			</h1>
+		{% endif %}
+
+		<div class="details col s12">
+			<em class="right blue-grey-text">
+				Published on 
+				{% assign day = post.date | date: "%-d"  %}
+				{{ post.date | date: "%B" }} 
+				{% case day %}
+					{% when '1' or '21' or '31' %}{{ day }}st
+					{% when '2' or '22' %}{{ day }}nd
+					{% when '3' or '23' %}{{ day }}rd
+					{% else %}{{ day }}th
+				{% endcase %} 
+				{{ post.date | date: "%Y" }} 
+				by {{ post.author }}
+			</em>
 		</div>
+
 		<div class="content col s12 flow-text">
 			{% if page.is_index %}
 				{% if post.summary %}{{ post.summary }}
@@ -26,20 +36,12 @@
 			{{ content }}
 			{% endif %}
 		</div>
+
+		<h6 class="tags col s12">
+			{% for tag in post.tags %}
+				<span class="tag light-blue white-text">{{ tag }}</span>
+			{% endfor %}
+		</h6>
     </div><!--content-->
 
-	<div class="details row">
-		<em class="right blue-grey-text">
-			Published on 
-			{% assign day = post.date | date: "%-d"  %}
-			{{ post.date | date: "%B" }} 
-			{% case day %}
-				{% when '1' or '21' or '31' %}{{ day }}st
-				{% when '2' or '22' %}{{ day }}nd
-				{% when '3' or '23' %}{{ day }}rd
-				{% else %}{{ day }}th
-			{% endcase %} 
-			{{ post.date | date: "%Y" }} 
-			by {{ post.author }}
-		</em>
-	</div>
+	

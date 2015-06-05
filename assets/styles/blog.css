@@ -6,6 +6,19 @@ a.brand-logo {
     font-weight: 900 !important;
 }
 
+.post {
+    box-shadow: 0 1px 0 #cfd8dc;
+    padding-bottom: 4em;
+}
+
+.tags {
+	line-height: 2.5em;
+}
+
+.tag {
+    padding: 0.5em 1em;
+}
+
 .highlight .hll { background-color: #333333 }
 .highlight { 
 	background: rgb(39,40,34); 
