@@ -45,7 +45,7 @@ header h1, header h2, header h1 a, header h2 a{
 	border-right: 1px solid rgba(0, 0, 0, 0.15);
 }
 
-pre {
+pre, p code {
     background: #eee none repeat scroll 0 0;
     border: 1px solid #ddd;
     padding: 3px;
