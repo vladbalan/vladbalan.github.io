@@ -1,3 +1,11 @@
+html {
+	font-family: 'Raleway';
+}
+
+a.brand-logo {
+    font-weight: 900 !important;
+}
+
 .highlight .hll { background-color: #333333 }
 .highlight { 
 	background: rgb(39,40,34); 
