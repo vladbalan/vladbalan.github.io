@@ -49,36 +49,69 @@ em {
 	color: #777777;
 }
 
-.post_content pre {
-	border: 1px solid #ddd;
-	background-color: #eef;
-	padding: 0 .4em;
+.highlight .hll { background-color: #333333 }
+.highlight  { 
+
+background: #111111; 
+
+color: #ffffff ;
+
+padding: 0.2em 0.9em;
+  margin-bottom: 1em;
+	font: normal normal normal 115%/normal 'Monaco', 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', monospace !important;
+  line-height: 1.1em;
+  overflow: auto;
+	font-size: 1.0em;
+	border: 1px solid #CCC;
+	
+	-moz-border-radius:7px;
+	-webkit-border-radius:7px;
+	border-radius:7px;
+
+
 }
 
-.post_content ul,
-.post_content ol {
-	margin-left: 1.35em;
+p > code, p > a > code, li > code, h3 > code
+{
+	
+border-radius: 4px;
+-webkit-border-radius: 4px;
+-moz-border-radius: 4px;
+color: #C5CBD0;
+/*color: white*/
+background-image: url(/images/opaque_20.png);
+font-family: Consolas, "Courier New", Courier, "Liberation Mono", monospace;
+font-size: 1.1em;
+/*height: 0px;
+image-rendering: auto;
+left: auto;
+list-style-type: disc;*/
+padding-bottom: 2px;
+padding-left: 4px;
+padding-right: 4px;
+padding-top: 2px;
+text-decoration: none;
+text-indent: 0px;
+text-shadow: none;
+text-transform: none;
+top: auto;
+
 }
 
-.post_content code {
-	border: 1px solid #ddd;
-	background-color: #eef;
-	font-size: 85%;
-	padding: 0 .2em;
+
+p > a > code
+{
+color: #95be7d;
 }
 
-.post_content pre code {
-  border: none;
+code, pre {
+	font-family: "Consolas", "Courier New", "Courier", "FreeMono", monospace;
+	font-size:0.95em;
+	margin: 1em 0 1.5em 0;
 }
 
-/* terminal */
-
-.post_content pre.terminal {
-border: 1px solid black;
-background-color: #333;
-color: white;
-}
-
-.post_content pre.terminal code {
-background-color: #333;
+.highlight span
+{
+font-family: "Consolas", "Courier New", "Courier", "FreeMono", monospace;
+font-size:1em;
 }
