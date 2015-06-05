@@ -2,6 +2,7 @@
 
 title: Introducing Jekyll Bootstrap
 layout: default
+tags: javascript programming webdev
 
 ---
 

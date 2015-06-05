@@ -2,7 +2,7 @@
 
 title: This is the title
 layout: default
-categories: first-category second
+tags: first-category second
 
 ---
 

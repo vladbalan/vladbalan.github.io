@@ -2,6 +2,7 @@
 
 title: Markdown syntax test
 layout: default
+tags: meteor javascript development useful markdown syntax
 
 ---
 [TOC]

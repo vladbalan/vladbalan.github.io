@@ -3,6 +3,7 @@
 title: Introducing Jekyll Bootstrap
 layout: default
 author: Vlad Balan
+tags: meteor javascript materialize
 
 ---
 
