@@ -4,6 +4,7 @@ paginate: 10
 exclude: []
 name: Useful Blog
 baseurl: 
+markdown: redcarpet
 defaults:
     -
         scope:
