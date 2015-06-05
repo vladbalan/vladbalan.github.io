@@ -1,0 +1,27 @@
+    <ul class="pagination">
+        {% if paginator.previous_page %}
+            {% if paginator.previous_page == 1 %}
+            <li class="waves-effect previous"><a href="{{ linkhome }}"><i class="mdi-navigation-chevron-left"></i></a></li>
+            {% else %}
+            <li class="waves-effect previous"><a href="{{ site.baseurl }}/page{{ paginator.previous_page }}"><i class="mdi-navigation-chevron-left"></i></a></li>
+            {% endif %}
+        {% else %}
+            <li class="disabled"><a href="#!"><i class="mdi-navigation-chevron-left"></i></a></li>
+        {% endif %}
+
+        {% for page in (1..paginator.total_pages) %}
+            {% if page == paginator.page %}
+                <li class="active"><a href="#!">{{ page }}</a></li>
+            {% elsif page == 1 %}
+                <li class="waves-effect"><a href="{{ linkhome }}">{{ page }}</a></li>
+            {% else %}
+                <li class="waves-effect"><a href="{{ site.baseurl }}/page{{ page }}">{{ page }}</a></li>
+            {% endif %}
+        {% endfor %}
+
+        {% if paginator.next_page %}
+            <li class="waves-effect next"><a href="{{ site.baseurl }}/page{{ paginator.next_page }}"><i class="mdi-navigation-chevron-right"></i></a></li>
+        {% else %}
+            <li class="disabled"><a href="#!"><i class="mdi-navigation-chevron-right"></i></a></li>
+        {% endif %}
+    </ul>
