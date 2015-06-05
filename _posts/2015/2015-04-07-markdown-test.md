@@ -87,18 +87,84 @@ Inline `code` has `back-ticks around` it.
 
 
 ```javascript
-var s = "JavaScript syntax highlighting";
-alert(s);
+Template.Main.events({
+    'submit .contact-form': function(e) {
+        e.preventDefault();
+
+        var input = {
+            name: 'Jon Doe' // $(e.target).find('[name=name]').val()
+            , email: 'bla@bla.bla' // $(e.target).find('[name=email]').val()
+            , message: 'Test message' // $(e.target).find('[name=message]').val()
+        }
+        
+        var valid = emailRegex.test(input.email) && !_.isEmpty(input.name) && !_.isEmpty(input.email) && !_.isEmpty(input.message);
+
+        if (valid) {
+            Meteor.call('message', input, function (err, result) {
+                if (err) {
+                    console.error('Error sending message: ' + err.reason);
+                } else {
+                    console.info('Message Sent Successfully. Thank You!');
+                }
+            });
+        }
+    }
+});
 ```
  
-```python
-s = "Python syntax highlighting"
-print s
+```php
+public function fetch()
+{
+    return [
+        'name' => $this->getName($this->controllerName),
+        'collection' => $this->getCollection(),
+        'resource' => $this->getResource(),
+        'model' => $this->getModel(),
+        'namespace' => $this->getNamespace()
+    ];
+}
+
+/**
+ * Format the name of the controller.
+ *
+ * @return string
+ */
+private function getName()
+{
+    return ucwords($this->controllerName); // LessonsController
+}
 ```
  
 ```
 No language indicated, so no syntax highlighting. 
 But let's throw in a <b>tag</b>.
+```
+
+```css
+#bottom_page ul p{
+    padding: 0 14px;
+    line-height: 34px;
+    margin-bottom: 0;
+    display: inline;
+    float: left;
+    border-right: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+em {
+    color: #777777;
+}
+
+.post_content pre {
+    border: 1px solid #ddd;
+    background-color: #eef;
+    padding: 0 .4em;
+}
+
+.post_content ul,
+.post_content ol {
+    margin-left: 1.35em;
+}
+
 ```
 
 Colons can be used to align columns.
